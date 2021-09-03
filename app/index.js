@@ -13,7 +13,7 @@ const epic_url = process.env.EPIC_URL;
 const play_url = process.env.PLAY_URL;
 const discord_webhook = process.env.DISCORD_WEBHOOK;
 const app_wait = process.env.APP_WAIT;
-const version = "1.0.1";
+const version = "1.0.2";
 const debug = true;
 
 // Generate a md5 hash of the data to be validated in the future
@@ -104,7 +104,7 @@ function getFormattedDate(){
 }
 
 async function run () {
-  console.log('Last Scrape Initiated: ' + getFormattedDate());
+  console.log(getFormattedDate() + ': Initiating Scrape');
   // Launch the browser
   const browser = await puppeteer.launch({args: [
     '--no-sandbox',
