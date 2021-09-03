@@ -79,7 +79,7 @@ async function postToDiscord(data) {
 }
 
 async function compareHashes(latestHash, savedHash) {
-  if (latestHash != savedHash){
+  if (latestHash != savedHash && savedHash != "pause"){
     return false
   }
   return true;
